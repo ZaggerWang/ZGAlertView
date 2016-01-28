@@ -64,41 +64,66 @@
             break;
         case 1:{
             alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题"
-                                                   message:@"我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容"
+                                                   message:@"我是内容我是内容我是内容我是内容我是内容我是内容我是内容"
                                          cancelButtonTitle:@"取消"
                                          otherButtonTitles:@"确定", nil];
         }
             break;
         case 2:{
-            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题" message:@"我是内我是内容我是内容我是内容我是内容我是内容我是内容容我是内容我是内容我是内容" cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题"
+                                                   message:@"我是内我是内容我是内容我是内容我内容我是内容我是内容"
+                                         cancelButtonTitle:@"取消"
+                                         otherButtonTitles:@"确定", nil];
             alertView.rowMaxButtonNumber = 1;
         }
             break;
         case 3:{
-            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题" message:@"我是内我是内容我是内容我是内容我是内容我是内容我是内容我是内容容我是内容我是内容我是内容" cancelButtonTitle:@"取消" otherButtonTitles:@"下次再说",@"确定", nil];
+            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题"
+                                                   message:@"我是内我是内容我是内容我是内容我是内容我是内容我是内容我是内容容我是内容我是内容我是内容"
+                                         cancelButtonTitle:@"取消"
+                                         otherButtonTitles:@"下次再说",@"确定", nil];
             alertView.rowMaxButtonNumber = 3;
         }
             break;
         case 4:{
-            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题" message:@"我是内容我我是内容我是内容我是内容是内容我是内容我是内容" cancelButtonTitle:@"取消" otherButtonTitles:@"确定",@"不确定",@"确不确定",@"到底确不确定", nil];
+            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题"
+                                                   message:@"我是内容我我是内容我是内容我是内容是内容我是内容我是内容"
+                                         cancelButtonTitle:@"取消"
+                                         otherButtonTitles:@"确定",@"不确定",@"确不确定",@"到底确不确定", nil];
         }
             break;
         case 5:{
-            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题" message:@"我是我是内容我是内容我是内容内容我是内容我是内容我是内容" cancelButtonTitle:@"取消" otherButtonTitles:@"确定",@"不确定",@"确不确定",@"到底确不确定", nil];
-            alertView.cancelButtonIndex = 3;
+            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题"
+                                                   message:@"我是我是内容我是内容我是内容内容我是内容我是内容我是内容"
+                                         cancelButtonTitle:@"取消"
+                                         otherButtonTitles:@"确定",@"不确定",@"确不确定",@"到底确不确定", nil];
+            alertView.cancelButtonIndex = 3;//修改取消按钮位置
         }
             break;
         case 6:{
-            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题" message:@"我是内容我我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容是内容我是内容我是内容" cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题"
+                                                   message:@"我是内容我我是内容我是内容我是内容我是内容我是内容我是内容我是内是内容"
+                                         cancelButtonTitle:@"取消"
+                                         otherButtonTitles:@"确定", nil];
             
             UIButton *customButton = [UIButton buttonWithType:UIButtonTypeCustom];
             customButton.backgroundColor = [UIColor orangeColor];
             [customButton setTitle:@"我是一个自定义按钮" forState:UIControlStateNormal];
-            
-            [alertView addCustomButton:customButton toIndex:1];
+            [alertView addCustomButton:customButton toIndex:1];//添加自定义按钮到指定位置
         }
             break;
-            
+        case 7:{
+            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题"
+                                                   message:@"我是内我是内容我是内容我我是内容容我是是内容容我是是内容容我是是内容容我是内容我是内容我是内容"
+                                         cancelButtonTitle:@"取消"
+                                         otherButtonTitles:@"下次再说",@"确定", nil];
+            alertView.rowMaxButtonNumber = 3;//设置同一行最多显示的按钮数
+            alertView.titleFont = [UIFont boldSystemFontOfSize:20];//标题字体大小
+            alertView.titleColor = [UIColor orangeColor];//标题字体颜色
+            alertView.messageFont = [UIFont systemFontOfSize:10];//内容字体大小
+            alertView.messageColor = [UIColor greenColor];//内容字体颜色
+        }
+            break;
         default:
             break;
     }
@@ -130,7 +155,7 @@
 
 - (NSArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = @[@"单个按钮",@"两个按钮同行",@"两个按钮不同行",@"多个按钮同行",@"每行一个按钮",@"指定取消按钮位置",@"添加自定义按钮"];
+        _dataArray = @[@"单个按钮",@"两个按钮同行",@"两个按钮不同行",@"多个按钮同行",@"每行一个按钮",@"指定取消按钮位置",@"添加自定义按钮", @"自定义字体和颜色"];
     }
     return _dataArray;
 }
