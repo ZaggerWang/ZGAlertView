@@ -56,11 +56,17 @@
     ZGAlertView *alertView = nil;
     switch (indexPath.row - 3) {
         case 0:{
-            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题" message:@"我是内容我是内容我是内容我是内容我是内容我是内容我是内容" cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题"
+                                                   message:@"我是内容我是内容我是内容我是内容我是内容我是内容我是内容"
+                                         cancelButtonTitle:nil
+                                         otherButtonTitles:@"确定", nil];
         }
             break;
         case 1:{
-            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题" message:@"我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容" cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+            alertView = [[ZGAlertView alloc] initWithTitle:@"我就是标题"
+                                                   message:@"我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容"
+                                         cancelButtonTitle:@"取消"
+                                         otherButtonTitles:@"确定", nil];
         }
             break;
         case 2:{
